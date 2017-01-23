@@ -9,213 +9,336 @@ h3,
 h4,
 h5,
 h6 {
-  padding:0;
-  margin:0;
-  font-family: "Roboto", sans-serif;
+    padding: 0;
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+    color: #346D71;
+    font size: 16px;
 }
 
-.clear-fix {
+.clear-fix
   overflow: auto;
 }
 
 .education-entry,
 .work-entry,
 .project-entry {
-  padding: 0 5%;
+padding: 0 5%;
 }
 
+/*TODO fix loop*/
 h1 {
-  font-size: 40px;
-  color: #f5a623;
-  line-height: 48px;
-  display: inline;
+font-family: "Work Sans",-apple-system,".SFNSText-Regular","San Francisco","Segoe UI","Helvetica Neue","Lucida Grande",sans-serif;
+font-size: 80px;
+font-weight: bold;
+color: #fff;
+text-align: center;
+text-transform: uppercase;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+background-image: url('../images/pac.gif');
+background-attachment: fixed;
+-webkit-animation: BackgroundAnimated 20s linear infinite;
+-moz-animation: BackgroundAnimated 20s linear infinite;
+-ms-animation: BackgroundAnimated 20s linear infinite;
+-o-animation: BackgroundAnimated 20s linear infinite;
+animation: BackgroundAnimated 20s linear infinite;
+}
+
+@keyframes BackgroundAnimated {
+from {
+    background-position: 0 0;
+}
+
+to {
+    background-position: 100% 0;
+}
+}
+
+@-webkit-keyframes BackgroundAnimated {
+    from {
+        background-position: 0 0;
+    }
+
+    to {
+        background-position: 100% 0;
+    };
+}
+
+@-ms-keyframes BackgroundAnimated {
+<    from {
+        background-position: 0 0;
+    }
+
+    to {
+        background-position: 100% 0;
+    };
+}
+
+@-moz-keyframes BackgroundAnimated {
+    from {
+        background-position: 0 0;
+    }
+
+    to {
+        background-position: 100% 0;
+    };
+}
 }
 
 h2 {
-  font-weight: bold;
-  font-size: 24px;
-  color: #999;
-  line-height: 29px;
-  padding: 10px;
-}
-
-h3 {
-  font-style: italic;
-  font-size: 20px;
-  color: #000;
-  line-height: 22px;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 29px;
+    padding: 10px;
 }
 
 h4 {
-  font-weight: bold;
-  font-size: 14px;
-  color: #4a4a4a;
-  line-height: 17px;
+    font-weight: bold;
+    font-size: 14px;
+    color: #4a4a4a;
+    line-height: 17px;
 }
 
 h2,
 h3,
 h4,
 h5 {
-  padding:10px 5%;
-
+    padding: 10px 5%;
 }
 
+/* Glyph, by Harry Roberts (modified) */
+hr.style-eight {
+    margin-bottom: 0;
+    padding: 0;
+    border-width: 10px;
+    border: none;
+    border-top: medium solid #346D71;
+    color: #fff;
+    text-align: center;
+}
+
+hr.style-eight:after {
+    content: "<> </>";
+    display: inline-block;
+    position: relative;
+    top: -0.7em;
+    font-size: 1.5em;
+    padding: 0 0.25em;
+    background: #346D71;
+}
+
+.header-role {
+    font-size: 30px;
+    font-family: 'Quicksand', sans-serif;
+    margin-bottom: 22px;
+    text-align: center;
+    font-weight: 300;
+    color: #346D71;
+    font-style: italic;
+    line-height: 22px;
+}
+
+#topContacts {
+    margin-bottom: 12px;
+}
+
+.a-contact {
+    color: #346D71;
+    padding: 5px;
+    margin: 0;
+    display: inline;
+    text-decoration: underline;
+}
 
 .date-text {
-  font-style: italic;
-  font-size: 14px;
-  color: #999;
-  line-height: 16px;
-  float: left;
+    font-style: italic;
+    font-size: 14px;
+    color: #999;
+    line-height: 16px;
 }
 
 .location-text {
-  font-style: italic;
-  font-size: 14px;
-  color: #999;
-  line-height: 16px;
-  float: right;
-
+    font-style: italic;
+    font-size: 14px;
+    color: #999;
+    line-height: 16px;
 }
 
 p {
-  font-size: 14px;
-  color: #333;
-  line-height: 21px;
+    font-size: 14px;
+    color: #333;
+    line-height: 21px;
 }
 
 a {
-  color: #1199c3;
-  text-decoration: none;
-  margin-top: 10px;
-  display: block;
+    color: #346D71;
+    text-decoration: none;
+    margin-top: 10px;
+    display: block;
 }
 
 .welcome-message {
-  font-style: italic;
-  font-size: 18px;
-  color: #f3f3f3;
-  line-height: 28px;
+    font-style: italic;
+    font-size: 18px;
+    color: #346D71;
+    line-height: 28px;
+}
+
+.contact-text {
+    display: none;
+    -webkit-transition: all 5s ease-in-out;
+}
+
+#skills {
+    margin-right: 0;
 }
 
 #skills-h3 {
-  color: #f5ae23;
-  display: none;
+    text-align: center;
+    color: #fff;
+    font-size: 20px;
+    color: #fff;
+    font-family: 'Quicksand', sans-serif;
+    position: relative;
+}
+
+.skill-icons {
+    font-size: 50px;
 }
 
 .orange {
-  background-color: #f5ae23;
+    background-color: #222233;
 }
 
 .orange-text {
-  color: #f5ae23;
+    color: #fff;
+    font-size: 22px;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 300;
+    text-transform: uppercase;
+    cursor: pointer;
 }
 
-.white-text {
-  font-weight: bold;
-  color: #fff;
+.orange-text:hover {
+    color: #e0e3e9;
+    transition: all 0.3s ease;
 }
 
 .gray {
-  background-color: #f3f3f3;
-  padding-bottom: 10px;
-  clear:both;
+    background-color: #f3f3f3;
+    padding-bottom: 10px;
+    clear: both;
 }
 
 .dark-gray {
-  background-color: #4a4a4a;
+    background-color: #21B095;
 }
 
-/* TODO: Replace with image later */
 #header {
-  background-color: #484848;
+    background-image: url('../images/background.svg');
+    background-attachment: fixed;
 }
 
 .flex-box {
-  display: -webkit-flex;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  padding: 10px;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 10px;
 }
 
 .flex-column {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  padding: 10px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    padding: 10px;
+    margin: 0;
 }
 
 .center-content {
-  padding: 2.5% 5%;
+    padding: 2.5% 5%;
 }
 
 ul {
-  list-style-type: none;
+    list-style-type: none;
 }
 
 .biopic {
-  float: left;
-  padding: 10px;
-  width: 200px;
-  display: none;
+    float: left;
+    padding: 2px 13px 20px 35px;
+ /* +radius = difformed effect*/
+    width: 160px;
+    display: none;
+    border-radius: 50%;
+}
+
+#workExperience {
+    padding: 20px;
+}
+
+#projects,
+#education,
+#courses {
+    padding: 20px;
 }
 
 img {
-  padding: 10px;
+    padding: 10px;
 }
 
 span {
-  padding: 5px;
+    padding: 5px;
 }
 
 #lets-connect {
-  text-align: center;
+    text-align: center;
 }
 
 /* Media queries to handle various device widths */
 
 @media only screen and (max-width: 1024px) {
-  #lets-connect {
-    margin-top: 5%;
-  }
+    #lets-connect {
+        margin-top: 5%;
+    };
 }
 
 @media only screen and (max-width:900px) {
-  .biopic {
-    width: 175px;
-  }
+    .biopic {
+        width: 175px;
+    };
 }
 
 @media only screen and (max-width: 750px) {
-  #lets-connect {
-    margin-top: 10%;
-  }
-  .biopic {
-    width: 150px;
-  }
-  .welcome-message {
-    display: none;
-  }
+    #lets-connect {
+        margin-top: 10%;
+    }
+
+    .biopic {
+        width: 150px;
+    }
+
+    .welcome-message {
+        display: none;
+    };
 }
 
 #map {
-  display: block;
-  height: 100%;
-  margin: 0 5%;
+    display: block;
+    height: 100%;
+    margin: 0 5%;
 }
 
 #mapDiv {
-  height: 400px;
-  width: 100%;
-  padding-bottom: 5%;
+    height: 300px;
+    width: 100%;
+    padding-bottom: 5%;
 }
 
 @media only screen and (min-width: 750px) {
-  #skills-h3,
+    #skills-h3,
   .biopic {
-    display: block;
-  }
+        display: block;
+    };
 }
