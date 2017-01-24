@@ -1,3 +1,4 @@
+var data = "%data%";
 var bio = {
     name: "Cornel Doncea",
     role: "Front-end Developer",
@@ -10,34 +11,33 @@ var bio = {
     },
     welcomeMessage: "I have built a diverse skill set spanning general management, graphic design, branding, product development.",
     skills: ['<i class="devicon-illustrator-line colored skill-icons"></i>', '<i class="devicon-photoshop-line colored skill-icons"></i>', '<i class="devicon-html5-plain colored skill-icons"></i>', '<i class="devicon-css3-plain colored skill-icons"></i>', '<i class="devicon-javascript-plain skill-icons colored"></i>'],
-    bioPic: "images/colina.jpg",
+    biopic: "images/colina.jpg",
     display: function() {
-      var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
+      var formattedRole = HTMLheaderRole.replace(data, bio.role);
       $("#header").prepend(formattedRole);
 
-      var formattedName = HTMLheaderName.replace("%data%", bio.name);
+      var formattedName = HTMLheaderName.replace(data, bio.name);
       $("#header").prepend(formattedName);
 
-      var formattedBioPic = HTMLbioPic.replace("%data%", bio.bioPic);
+      var formattedBioPic = HTMLbioPic.replace(data, bio.biopic);
       $("#header").append(formattedBioPic);
 
-      var formattedWelcomeMsg = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
+      var formattedWelcomeMsg = HTMLwelcomeMsg.replace(data, bio.welcomeMessage);
       $("#header").append(formattedWelcomeMsg);
 
-      var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
-      var formattedEmail = HTMLemail.replace("%data%", bio.contacts.email);
-      var formattedGithub = HTMLgithub.replace("%data%", bio.contacts.github);
-      var formattedBehance = HTMLbehance.replace("%data%", bio.contacts.behance);
-      var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
+      var formattedMobile = HTMLmobile.replace(data, bio.contacts.mobile);
+      var formattedEmail = HTMLemail.replace(data, bio.contacts.email);
+      var formattedGithub = HTMLgithub.replace(data, bio.contacts.github);
+      var formattedBehance = HTMLbehance.replace(data, bio.contacts.behance);
+      var formattedLocation = HTMLlocation.replace(data, bio.contacts.location);
       var allContacts = formattedMobile + formattedEmail + formattedGithub + formattedBehance + formattedLocation;
 
-      $("#topContacts").append(allContacts);
-      $("#footerContacts").append(allContacts);
+      $("#topContacts, #footerContacts").append(allContacts);
 
       if (bio.skills.length > 0) {
           $("#header").append(HTMLskillsStart);
           for (i = 0; i < bio.skills.length; i++) {
-              formattedSkills = HTMLskills.replace("%data%", bio.skills[i]);
+              formattedSkills = HTMLskills.replace(data, bio.skills[i]);
               $("#skills").append(formattedSkills);
           }
       }
@@ -50,7 +50,7 @@ var education = {
     schools: [{
         name: "Universitatea Bucuresti",
         degree: "Bachelor",
-        major: ["Sociology"],
+        majors: ["Sociology"],
         dates: "2005-2008",
         location: "Romania",
         city: "Bucharest, RO",
@@ -66,15 +66,15 @@ var education = {
       if (education.schools.length > 0) {
           $("#education").append(HTMLschoolStart);
           education.schools.forEach(function(school) {
-              var formattedSchoolName = HTMLschoolName.replace("%data%", school.name);
+              var formattedSchoolName = HTMLschoolName.replace(data, school.name);
               $(".education-entry:last").append(formattedSchoolName);
-              var formattedSchoolDates = HTMLschoolDates.replace("%data%", school.dates);
+              var formattedSchoolDates = HTMLschoolDates.replace(data, school.dates);
               $(".education-entry:last").append(formattedSchoolDates);
-              var formattedSchoolLocation = HTMLschoolLocation.replace("%data%", school.city);
+              var formattedSchoolLocation = HTMLschoolLocation.replace(data, school.city);
               $(".education-entry:last").append(formattedSchoolLocation);
-              var formattedSchoolMajor = HTMLschoolMajor.replace("%data%", school.major);
+              var formattedSchoolMajor = HTMLschoolMajor.replace(data, school.majors);
               $(".education-entry:last").append(formattedSchoolMajor);
-              var formattedSchoolDegree = HTMLschoolDegree.replace("%data%", school.degree);
+              var formattedSchoolDegree = HTMLschoolDegree.replace(data, school.degree);
               $(".education-entry:last").append(formattedSchoolDegree);
           });
       }
@@ -82,13 +82,13 @@ var education = {
       if (education.onlineCourses.length > 0) {
           $("#education").append(HTMLonlineClasses);
           education.onlineCourses.forEach(function(course) {
-              var formattedonlineTitle = HTMLonlineTitle.replace("%data%", course.title);
+              var formattedonlineTitle = HTMLonlineTitle.replace(data, course.title);
               $("#courses:last").append(formattedonlineTitle);
-              var formattedonlineSchool = HTMLonlineSchool.replace("%data%", course.school);
+              var formattedonlineSchool = HTMLonlineSchool.replace(data, course.school);
               $("#courses:last").append(formattedonlineSchool);
-              var formattedonlineDates = HTMLonlineDates.replace("%data%", course.dates);
+              var formattedonlineDates = HTMLonlineDates.replace(data, course.dates);
               $("#courses:last").append(formattedonlineDates);
-              var formattedonlineURL = HTMLonlineURL.replace("%data%", course.url);
+              var formattedonlineURL = HTMLonlineURL.replace(data, course.url);
               $("#courses:last").append(formattedonlineURL);
           });
       }
@@ -110,7 +110,7 @@ var work = {
             title: "Co-founder",
             dates: "2004 - 2012",
             description: "Owned a site that reached 180k daily uniques and won a Webstock award. Worked on design, UX and various aspects, including managing a team of content writers.",
-            location: "remote"
+            location: "Romania"
         },
         {
             employer: "CMFB.ro",
@@ -123,13 +123,13 @@ var work = {
     display: function() {
       $("#workExperience").append(HTMLworkStart);
       work.jobs.forEach(function(job) {
-          var formattedEmployer = HTMLworkEmployer.replace("%data%", job.employer);
-          var formattedTitle = HTMLworkTitle.replace("%data%", job.title);
+          var formattedEmployer = HTMLworkEmployer.replace(data, job.employer);
+          var formattedTitle = HTMLworkTitle.replace(data, job.title);
           var formattedEmployerTitle = formattedEmployer + formattedTitle;
           $(".work-entry:last").append(formattedEmployerTitle);
-          var formattedDates = HTMLworkDates.replace("%data%", job.dates);
+          var formattedDates = HTMLworkDates.replace(data, job.dates);
           $(".work-entry:last").append(formattedDates);
-          var formattedDescription = HTMLworkDescription.replace("%data%", job.description);
+          var formattedDescription = HTMLworkDescription.replace(data, job.description);
           $(".work-entry:last").append(formattedDescription);
       });
     }
@@ -139,26 +139,39 @@ work.display();
 
 var projects = {
     projects: [{
+        title: "Coin Watcher",
+        dates: "2014",
+        description: "Designed app/icon for a bitcoin monitoring software.",
+        images: ["images/bitcoin/icon.png", "images/bitcoin/graph.jpg"]
+      },
+    {
         title: "Psychics Online",
         dates: "2015",
         description: "Designed different elements like logo and icons for an online IM platform.",
-        images: ["images/psychics.jpg", "images/icoane-po.jpg", "images/box-po.jpg"]
-    }],
+        images: ["images/psychics/psychics.jpg", "images/psychics/box-po.jpg"]
+      },
+    {
+        title: "ChatOn",
+        dates: "2016",
+        description: "Designed the logo for an instant messaging app.",
+        images: ["images/chaton/icon.png"]
+      }        
+  ],
     display: function() {
       $("#projects").append(HTMLprojectStart);
       projects.projects.forEach(function(project) {
-          var formattedTitle = HTMLprojectTitle.replace("%data%", project.title);
+          var formattedTitle = HTMLprojectTitle.replace(data, project.title);
           $(".project-entry:last").append(formattedTitle);
 
-          var formattedDates = HTMLprojectDates.replace("%data%", project.dates);
+          var formattedDates = HTMLprojectDates.replace(data, project.dates);
           $(".project-entry:last").append(formattedDates);
 
-          var formattedDescription = HTMLprojectDescription.replace("%data%", project.description);
+          var formattedDescription = HTMLprojectDescription.replace(data, project.description);
           $(".project-entry:last").append(formattedDescription);
 
           if (project.images.length > 0) {
               project.images.forEach(function(image) {
-                  var formattedImage = HTMLprojectImage.replace("%data%", image);
+                  var formattedImage = HTMLprojectImage.replace(data, image);
                   $(".project-entry:last").append(formattedImage);
               });
           }
