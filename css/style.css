@@ -13,7 +13,7 @@ h6 {
     margin: 0;
     font-family: "Roboto", sans-serif;
     color: #346D71;
-    font size: 16px;
+    font size: 18px;
 }
 
 .clear-fix
@@ -30,6 +30,7 @@ padding: 0 5%;
 h1 {
 font-family: "Work Sans",-apple-system,".SFNSText-Regular","San Francisco","Segoe UI","Helvetica Neue","Lucida Grande",sans-serif;
 font-size: 80px;
+margin-bottom: 42px;
 font-weight: bold;
 color: #fff;
 text-align: center;
@@ -119,7 +120,7 @@ hr.style-eight {
 }
 
 hr.style-eight:after {
-    content: "<> </>";
+    content: "<>Front-end Developer</>";
     display: inline-block;
     position: relative;
     top: -0.7em;
@@ -137,6 +138,7 @@ hr.style-eight:after {
     color: #346D71;
     font-style: italic;
     line-height: 22px;
+    display: none;
 }
 
 #topContacts {
@@ -166,9 +168,10 @@ hr.style-eight:after {
 }
 
 p {
-    font-size: 14px;
-    color: #333;
+    font-size: 17px;
+    color: #999;
     line-height: 21px;
+    font-weight: 300;
 }
 
 a {
@@ -176,6 +179,7 @@ a {
     text-decoration: none;
     margin-top: 10px;
     display: block;
+    font-size: 20px;
 }
 
 .welcome-message {
@@ -190,12 +194,9 @@ a {
     -webkit-transition: all 5s ease-in-out;
 }
 
-#skills {
-    margin-right: 0;
-}
-
 #skills-h3 {
-    text-align: center;
+    display: flex;
+    justify-content: center;
     color: #fff;
     font-size: 20px;
     color: #fff;
@@ -339,6 +340,6 @@ span {
 @media only screen and (min-width: 750px) {
     #skills-h3,
   .biopic {
-        display: block;
+        display: flex;
     };
 }
