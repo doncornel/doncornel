@@ -139,13 +139,13 @@ work.display();
 
 var projects = {
     projects: [{
-        title: "Coin Watcher",
+        title: '<a href="https://itunes.apple.com/us/app/coin-watcher/id891238529?mt=8" target="blank">Coin Watcher</a>',
         dates: "2014",
         description: "Designed app/icon for a bitcoin monitoring software.",
         images: ["images/bitcoin/icon.png", "images/bitcoin/graph.jpg"]
       },
     {
-        title: "Psychics Online",
+        title: '<a href="http://psychicsonline.co.uk" target="blank">Psychics Online</a>',
         dates: "2015",
         description: "Designed different elements like logo and icons for an online IM platform.",
         images: ["images/psychics/psychics.jpg", "images/psychics/box-po.jpg"]
@@ -155,7 +155,7 @@ var projects = {
         dates: "2016",
         description: "Designed the logo for an instant messaging app.",
         images: ["images/chaton/icon.png"]
-      }        
+      }
   ],
     display: function() {
       $("#projects").append(HTMLprojectStart);
