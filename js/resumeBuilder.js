@@ -181,7 +181,7 @@ var projects = {
 
 projects.display();
 
-$("#mapDiv").append(googleMap);
+
 
 $(document).ready(function() {
     $('span.orange-text').click(function() {
